@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="278 100 366 332" role="img" aria-label="Nipangishe icon">
+  <defs>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12468A"/>
+      <stop offset="1" stop-color="#0A2A55"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8CC85A"/>
+      <stop offset="1" stop-color="#4E9F3D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===== NAVY HOUSE (landlord) ===== -->
+  <path d="M410 130 L300 215 L300 400 L520 400 L520 215 Z"
+        fill="none" stroke="url(#navy)" stroke-width="22" stroke-linejoin="miter"/>
+
+  <!-- ===== GREEN HOUSE (tenant), with white halo to interlock ===== -->
+  <path d="M390 345 L390 215 L500 130 L610 215 L610 400 L558 400"
+        fill="none" stroke="#FFFFFF" stroke-width="44" stroke-linejoin="round"/>
+  <path d="M390 345 L390 215 L500 130 L610 215 L610 400 L558 400"
+        fill="none" stroke="url(#green)" stroke-width="22" stroke-linejoin="miter"/>
+
+  <!-- Window -->
+  <g fill="#0A2A55">
+    <rect x="441" y="290" width="13" height="13" rx="1.5"/>
+    <rect x="458" y="290" width="13" height="13" rx="1.5"/>
+    <rect x="441" y="307" width="13" height="13" rx="1.5"/>
+    <rect x="458" y="307" width="13" height="13" rx="1.5"/>
+  </g>
+</svg>

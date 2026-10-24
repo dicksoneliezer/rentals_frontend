@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* =========================================================
+   Base / global
+   ========================================================= */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Prevent iOS from zooming when an input has <16px font-size */
+@supports (-webkit-touch-callout: none) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   Ant Design — table wrapper
+   ========================================================= */
+.ant-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* momentum scroll on iOS */
+  overscroll-behavior-x: contain;    /* stops the whole page bouncing */
+}
+
+/* =========================================================
+   Ant Design — prevent tables from forcing page-wide scroll
+   ========================================================= */
+.ant-table-wrapper .ant-table {
+  min-width: max-content;
+}
+
+/* Let tall tables scroll inside their card instead of stretching it */
+.ant-table-body,
+.ant-table-content {
+  scrollbar-width: thin;
+}
+
+/* =========================================================
+   Tailwind + AntD conflict guard
+   ========================================================= */
+/* Tailwind's preflight resets button/border styles that AntD relies on.
+   If you see unstyled buttons, borders disappearing, or icons misaligned,
+   uncomment the two rules below: */
+/*
+.ant-btn { border: 1px solid transparent; }
+.ant-btn-primary { border-color: transparent; }
+*/

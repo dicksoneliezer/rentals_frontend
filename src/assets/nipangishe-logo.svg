@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="41 96 828 478" width="828" height="478" role="img" aria-label="Nipangishe logo - Makazi yako, hatua moja karibu.">
+  <defs>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12468A"/>
+      <stop offset="1" stop-color="#0A2A55"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8CC85A"/>
+      <stop offset="1" stop-color="#4E9F3D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===== NAVY HOUSE + KEY (landlord) ===== -->
+  <path d="M410 130 L300 215 L300 400 L520 400 L520 215 Z"
+        fill="none" stroke="url(#navy)" stroke-width="22" stroke-linejoin="miter"/>
+
+  <!-- ===== GREEN HOUSE (tenant), with white halo to interlock ===== -->
+  <path d="M390 345 L390 215 L500 130 L610 215 L610 400 L558 400"
+        fill="none" stroke="#FFFFFF" stroke-width="44" stroke-linejoin="round"/>
+  <path d="M390 345 L390 215 L500 130 L610 215 L610 400 L558 400"
+        fill="none" stroke="url(#green)" stroke-width="22" stroke-linejoin="miter"/>
+
+  <!-- Window -->
+  <g fill="#0A2A55">
+    <rect x="441" y="290" width="13" height="13" rx="1.5"/>
+    <rect x="458" y="290" width="13" height="13" rx="1.5"/>
+    <rect x="441" y="307" width="13" height="13" rx="1.5"/>
+    <rect x="458" y="307" width="13" height="13" rx="1.5"/>
+  </g>
+
+  <!-- ===== NAVY KEY (left) ===== -->
+  <line x1="300" y1="335" x2="128" y2="335" stroke="url(#navy)" stroke-width="22" stroke-linecap="round"/>
+  <g stroke="url(#navy)" stroke-width="14" stroke-linecap="round">
+    <line x1="150" y1="328" x2="150" y2="292"/>
+    <line x1="182" y1="328" x2="182" y2="276"/>
+    <line x1="214" y1="328" x2="214" y2="298"/>
+    <line x1="246" y1="328" x2="246" y2="282"/>
+    <line x1="278" y1="328" x2="278" y2="300"/>
+  </g>
+  <!-- trailing dots -->
+  <g fill="#0A2A55">
+    <circle cx="96" cy="335" r="7"/>
+    <circle cx="74" cy="335" r="5"/>
+    <circle cx="57" cy="335" r="3.5"/>
+  </g>
+
+  <!-- ===== GREEN KEY (right) ===== -->
+  <line x1="610" y1="335" x2="782" y2="335" stroke="url(#green)" stroke-width="22" stroke-linecap="round"/>
+  <g stroke="url(#green)" stroke-width="14" stroke-linecap="round">
+    <line x1="632" y1="328" x2="632" y2="300"/>
+    <line x1="664" y1="328" x2="664" y2="282"/>
+    <line x1="696" y1="328" x2="696" y2="298"/>
+    <line x1="728" y1="328" x2="728" y2="276"/>
+    <line x1="760" y1="328" x2="760" y2="292"/>
+  </g>
+  <!-- trailing dots -->
+  <g fill="#4E9F3D">
+    <circle cx="814" cy="335" r="7"/>
+    <circle cx="836" cy="335" r="5"/>
+    <circle cx="853" cy="335" r="3.5"/>
+  </g>
+
+  <!-- ===== WORDMARK ===== -->
+  <text x="455" y="505" text-anchor="middle"
+        font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="-1.5"
+        fill="#0A2A55">nipa<tspan fill="#4E9F3D">ngishe</tspan></text>
+
+  <!-- Tagline with divider dots -->
+  <text x="455" y="556" text-anchor="middle"
+        font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="500" letter-spacing="1.5"
+        fill="#5B6B7F">Makazi yako, hatua moja karibu.</text>
+</svg>
