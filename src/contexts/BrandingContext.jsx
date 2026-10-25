@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState, useCallback, useMemo } from 'react';
 import { getBranding, getMyBranding } from '../api/branding';
+import { resolveApiAsset } from '../api/assets';
 import { useAuth } from '../hooks/useAuth';
 import { BRAND } from '../config/brand';
 
@@ -21,9 +22,9 @@ function mapBranding(data) {
     name: data.company_name || BRAND.name,
     tagline: data.company_slogan || BRAND.tagline,
     description: BRAND.description,
-    logo: data.logo_url || BRAND.logo,
-    mark: data.logo_mark_url || BRAND.mark,
-    signature: data.signature_url || null,
+    logo: resolveApiAsset(data.logo_url) || BRAND.logo,
+    mark: resolveApiAsset(data.logo_mark_url) || BRAND.mark,
+    signature: resolveApiAsset(data.signature_url),
     hasLogo: !!data.has_logo,
     hasSignature: !!data.has_signature,
   };

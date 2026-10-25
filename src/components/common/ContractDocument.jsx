@@ -10,6 +10,8 @@
  * shared by every document, not terms of the agreement. Only the tenant's
  * signature belongs to this particular contract.
  */
+import { resolveApiAsset } from '../../api/assets'
+
 function MetaBox({ label, value }) {
   if (!value) return null
   return (
@@ -50,8 +52,8 @@ export default function ContractDocument({
 }) {
   if (!snapshot) return null
 
-  const logoUrl = branding?.logo_url
-  const ownerSignatureUrl = branding?.signature_url
+  const logoUrl = resolveApiAsset(branding?.logo_url)
+  const ownerSignatureUrl = resolveApiAsset(branding?.signature_url)
   // Prefer the name frozen into the snapshot (the owner's own saved setting),
   // so the letterhead matches the clause text inside the same document. The
   // shared branding config is only a fallback for unconfigured owners.

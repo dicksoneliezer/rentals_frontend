@@ -2,6 +2,7 @@ import { Typography, Descriptions, Divider } from 'antd'
 import dayjs from 'dayjs'
 import CurrencyDisplay from './CurrencyDisplay'
 import { BRAND } from '../../config/brand'
+import { resolveApiAsset } from '../../api/assets'
 
 const { Title, Text } = Typography
 
@@ -13,8 +14,8 @@ const getBranding = (receipt) => ({
   slogan: receipt?.branding?.company_slogan,
   phone: receipt?.branding?.company_phone,
   address: receipt?.branding?.company_address,
-  logoUrl: receipt?.branding?.logo_url,
-  signatureUrl: receipt?.branding?.signature_url,
+  logoUrl: resolveApiAsset(receipt?.branding?.logo_url),
+  signatureUrl: resolveApiAsset(receipt?.branding?.signature_url),
 })
 
 export function ReceiptSignature({ name, companyName = BRAND.name, signatureUrl }) {
