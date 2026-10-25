@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { rewriteAssetUrls } from './assets'
 
 const instance = axios.create({
   baseURL: 'https://api.ocpac.co.tz/api',
@@ -20,7 +21,12 @@ instance.interceptors.request.use(
 )
 
 instance.interceptors.response.use(
-  (response) => response,
+  (response) => {
+    if (response.data && typeof response.data === 'object') {
+      response.data = rewriteAssetUrls(response.data)
+    }
+    return response
+  },
   (error) => {
     if (error.response?.status === 401) {
       localStorage.removeItem('token')
